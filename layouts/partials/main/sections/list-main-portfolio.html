@@ -1,0 +1,22 @@
+<div class="portfolio-single" data-display="block">
+  {{ if eq .Type "blog" }}
+    <div class="portfolio-single__title">
+      {{ .Title }}
+    </div>
+    <div class="portfolio-single__meta">
+      {{ partial "main/component/article-meta.html" . }}
+    </div>
+  {{ end }}
+
+  <article class="portfolio-single__contents" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
+    {{ with .Resources.ByType "image" }}
+    <div class="Image">
+    {{ range . }}
+        <img src="{{ .RelPermalink }}">
+    {{ end }}
+
+    </div>
+  </article>
+
+</div>
+{{ end }}
