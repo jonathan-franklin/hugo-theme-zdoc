@@ -3,8 +3,10 @@
     <div class="portfolio-single__title">
       {{ .Title }}
     </div>
+
     <div class="portfolio-single__meta">
       {{ partial "main/component/article-meta.html" . }}
+      {{ partial "main/component/reel_embed.html" . }}
     </div>
   {{ end }}
 
