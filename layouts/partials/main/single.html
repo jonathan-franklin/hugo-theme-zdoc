@@ -12,7 +12,6 @@
     <article id="list-main" class="{{ if $wideViewAsDefault }}mr{{ else }}m{{ end }}" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
       {{ partial "main/sections/list-main.html" . }}
       {{ partial "quartz/graph.html" . }}
-      {{ partial "quartz/backlinks.html" . }}
       {{ partial "main/component/pagination-single.html" . }}
       {{ partial "comments/comments.html" . }}
     </article>
